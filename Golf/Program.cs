@@ -22,7 +22,7 @@ namespace Golf
 
             bool fallen_In_cup = false;
 
-            while (fallen_In_cup==false)
+            while (fallen_In_cup == false)
             {
                 if (triedCount > total_possibilities)
                 {
@@ -40,7 +40,7 @@ namespace Golf
                 Console.WriteLine($"{triedCount} The start location is {start_location}");
 
 
-                
+
                 Console.WriteLine("Enter the size of angle: ");
                 double angle = double.Parse(Console.ReadLine());
 
@@ -51,7 +51,7 @@ namespace Golf
 
                 double distance = Math.Pow(velocity, 2) / gravity * Math.Sin(2 * angle_In_Radianns);
                 Console.WriteLine($"This time cover distance is {distance}");
-                
+
                 covered_distance = covered_distance + distance;
                 //total_Distance = total_Distance - covered_distance;
 
@@ -60,7 +60,7 @@ namespace Golf
 
                 start_location = start_location + distance;
 
-                
+
 
                 double new_Distance = 0;
 
@@ -73,12 +73,12 @@ namespace Golf
                         {
                             throw new CustomerException("Game is finished because you are more than two hundred meters far away from the cup .");
                         }
-                        catch(CustomerException ex)
+                        catch (CustomerException ex)
                         {
                             Console.WriteLine($"Error message {ex.Message}");
                             break;
                         }
-                        
+
                     }
                     else
                     {
@@ -104,7 +104,7 @@ namespace Golf
 
             }
 
-            
+
 
             Console.ReadLine();
         }
