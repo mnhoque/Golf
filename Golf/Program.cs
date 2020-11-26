@@ -24,8 +24,6 @@ namespace Golf
 
             while (fallen_In_cup==false)
             {
-                Console.WriteLine($"{triedCount} The start location is {start_location}");
-
                 if (triedCount > total_possibilities)
                 {
                     try
@@ -39,6 +37,10 @@ namespace Golf
                     }
 
                 }
+                Console.WriteLine($"{triedCount} The start location is {start_location}");
+
+
+                
                 Console.WriteLine("Enter the size of angle: ");
                 double angle = double.Parse(Console.ReadLine());
 
